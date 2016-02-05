@@ -37,17 +37,20 @@ public class MainActivity extends AppCompatActivity {
 
                 EditText editTextInput = (EditText) findViewById(R.id.input);
                 String stringInput = editTextInput.getText().toString();
+
                 int input = Integer.parseInt(stringInput);
+
                 adapter.addItem(input);
                 editTextInput.getText().clear();
             }
         });
 
-        Button buttonSort = (Button) findViewById(R.id.button_sort);
+        final Button buttonSort = (Button) findViewById(R.id.button_sort);
         buttonSort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                adapter.sortItem();
             }
         });
     }
