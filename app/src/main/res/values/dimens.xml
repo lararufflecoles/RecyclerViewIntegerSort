@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="toolbar_text_size">20sp</dimen>
-    <dimen name="edit_text_text_size">20sp</dimen>
-    <dimen name="recycler_view_item_text_size">20sp</dimen>
-    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="text_size_normal">20sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
 
     <dimen name="layout_margin_tiny">3dp</dimen>
     <dimen name="layout_margin_smaller">10dp</dimen>

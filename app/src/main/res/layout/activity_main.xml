@@ -18,14 +18,14 @@
 
         <EditText
             android:id="@+id/input"
+            style="@style/EditTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/layout_margin_normal"
             android:layout_marginRight="@dimen/layout_margin_normal"
             android:layout_marginTop="@dimen/layout_margin_normal"
             android:layout_weight="1"
-            android:inputType="number"
-            android:textSize="@dimen/edit_text_text_size" />
+            android:inputType="number" />
 
         <Button
             android:id="@+id/button_add"
