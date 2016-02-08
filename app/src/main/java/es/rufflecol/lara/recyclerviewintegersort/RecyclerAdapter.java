@@ -62,4 +62,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         Collections.reverse(items);
         notifyDataSetChanged();
     }
+
+    public List<Integer> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Integer> items) {
+        this.items = items;
+        notifyDataSetChanged();
+    }
 }

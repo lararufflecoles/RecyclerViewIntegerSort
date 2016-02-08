@@ -8,11 +8,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String SAVED_INSTANCE_STATE_KEY = "Key";
+
     private RecyclerView recyclerView;
     private RecyclerAdapter adapter;
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putIntegerArrayList(SAVED_INSTANCE_STATE_KEY, (ArrayList<Integer>) adapter.getItems());
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        ArrayList<Integer> list = savedInstanceState.getIntegerArrayList(SAVED_INSTANCE_STATE_KEY);
+        adapter.setItems(list);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
